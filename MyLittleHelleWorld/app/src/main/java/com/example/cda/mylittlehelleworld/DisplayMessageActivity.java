@@ -1,13 +1,11 @@
 package com.example.cda.mylittlehelleworld;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 
 public class DisplayMessageActivity extends ActionBarActivity {
@@ -21,13 +19,20 @@ public class DisplayMessageActivity extends ActionBarActivity {
         Intent intent = getIntent();
         String message = intent.getStringExtra(ActivityMainActivity.EXTRA_MESSAGE);
 
-        //Create the text view
-        TextView textView = new TextView(this);
-        textView.setTextSize(40);
-        textView.setText(message);
+        if (message.equals("android")) {
+            //Create the text view
+            TextView textView = new TextView(this);
+            textView.setTextSize(40);
 
-        //Set the text view as the activity layout
-        setContentView(textView);
+            textView.setTextColor(Color.RED);
+            textView.setText(message);
+
+            //Sets the background in the textView
+            textView.setBackgroundResource(R.drawable.androidvsapplefight);
+
+            //Set the text view as the activity layout
+            setContentView(textView);
+        }
     }
 
 
