@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
@@ -19,7 +20,8 @@ public class DisplayMessageActivity extends ActionBarActivity {
         Intent intent = getIntent();
         String message = intent.getStringExtra(ActivityMainActivity.EXTRA_MESSAGE);
 
-        if (message.equals("android")) {
+
+
             //Create the text view
             TextView textView = new TextView(this);
             textView.setTextSize(40);
@@ -32,7 +34,7 @@ public class DisplayMessageActivity extends ActionBarActivity {
 
             //Set the text view as the activity layout
             setContentView(textView);
-        }
+
     }
 
 
@@ -51,5 +53,13 @@ public class DisplayMessageActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        //from the actionbar.xml file i made
+        getMenuInflater().inflate(R.menu.actionbar, menu);
+        return super.onCreateOptionsMenu(menu);
+        //return true;
     }
 }
