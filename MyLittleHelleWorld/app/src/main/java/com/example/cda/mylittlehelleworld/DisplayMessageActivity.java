@@ -18,7 +18,7 @@ public class DisplayMessageActivity extends ActionBarActivity {
 
         //Gets the message from the intent and assign it to a local variable
         Intent intent = getIntent();
-        String message = intent.getStringExtra(ActivityMainActivity.EXTRA_MESSAGE);
+        String message = intent.getStringExtra(ActivityMainActivity.KEY);
 
 
 

@@ -17,7 +17,7 @@ public class ActivityMainActivity extends ActionBarActivity {
     private EditText EnterText;
     private TextView textViewOUT;
 
-    public final static String EXTRA_MESSAGE = "com.example.cda.mylittlehelloworld.MESSAGE";
+    public final static String KEY = "com.example.cda.mylittlehelloworld.MESSAGE";
 
 
 
@@ -38,7 +38,7 @@ public class ActivityMainActivity extends ActionBarActivity {
         //The variable message holds the user data from EnterText and converts it to a string
         String message = EnterText.getText().toString();
         //a intent can carry daa as key-value pairs, the putExtra method takes the key in the first parameter and the value in the second
-        intent.putExtra(EXTRA_MESSAGE, message);
+        intent.putExtra(KEY, message);
         //Start the intent
         startActivity(intent);
 
