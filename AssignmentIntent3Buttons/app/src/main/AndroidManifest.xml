@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.charlesmaten.assignmentintent3buttons" >
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
 
     <application
         android:allowBackup="true"
@@ -23,6 +24,10 @@
         <activity
             android:name=".ActivityEmail"
             android:label="@string/title_activity_activity_email" >
+        </activity>
+        <activity
+            android:name=".ActivitySensor"
+            android:label="@string/title_activity_activity_sensor" >
         </activity>
     </application>
 

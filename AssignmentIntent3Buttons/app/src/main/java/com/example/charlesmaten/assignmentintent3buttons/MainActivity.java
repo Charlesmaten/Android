@@ -13,6 +13,7 @@ public class MainActivity extends ActionBarActivity {
 
     private Button buttonOnPressPicture;
     private Button buttonOnPressEmail;
+    private Button buttonOnPressSensor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +49,18 @@ public class MainActivity extends ActionBarActivity {
 
                 startActivity(intent);
 
+            }
+        });
+
+        buttonOnPressSensor = (Button) findViewById(R.id.buttonSensor);
+
+        buttonOnPressSensor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(),ActivitySensor.class);
+
+                startActivity(intent);
             }
         });
 

@@ -41,11 +41,8 @@ public class ActivityEmail extends ActionBarActivity {
             @Override
             public void onClick(View v) {
 
-
                 String message = UserMessage.getText().toString();
-                //String emailTo = UserEmail.getText().toString();
                 sendEmail(message);
-
 
             }
         });
@@ -56,14 +53,12 @@ public class ActivityEmail extends ActionBarActivity {
         String theSubject = UserSubject.getText().toString();
 
         String[] to = new String[]{emailTo};
-        //String subject = ("A message from your app!");
 
         Intent emailIntent = new Intent(Intent.ACTION_SEND);
 
         emailIntent.putExtra(Intent.EXTRA_EMAIL, to);
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, theSubject);
         emailIntent.putExtra(Intent.EXTRA_TEXT, message);
-        //emailIntent.setType("text/plain");
         emailIntent.setType("message/rfc822");
         startActivity(Intent.createChooser(emailIntent, "Email"));
 
