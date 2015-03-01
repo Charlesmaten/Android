@@ -12,12 +12,16 @@ import android.widget.EditText;
 
 import org.apache.http.protocol.HTTP;
 
+import java.net.URLEncoder;
+
 
 public class ActivityEmail extends ActionBarActivity {
 
 
     private Button buttonOnPressDone;
     private EditText UserEmail;
+    private EditText UserMessage;
+    private EditText UserSubject;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,28 +34,40 @@ public class ActivityEmail extends ActionBarActivity {
     private void initUI(){
         buttonOnPressDone = (Button) findViewById(R.id.buttonDone);
         UserEmail = (EditText) findViewById(R.id.editTextEmail);
+        UserMessage = (EditText) findViewById(R.id.editTextMessage);
+        UserSubject = (EditText) findViewById(R.id.editTextSubject);
 
         buttonOnPressDone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
 
-                String message = UserEmail.getText().toString();
+                String message = UserMessage.getText().toString();
+                //String emailTo = UserEmail.getText().toString();
+                sendEmail(message);
 
-                Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
-
-                emailIntent.setData(Uri.parse("mailto:"));
-                emailIntent.putExtra(emailIntent.EXTRA_EMAIL, message);
-
-                startActivity(emailIntent);
-
-
-
-               // emailIntent.setType("*/*");
-                //emailIntent.putExtra(Intent.EXTRA_EMAIL,  UserEmail);
 
             }
         });
+    }
+
+    private void sendEmail(String message) {
+        String emailTo = UserEmail.getText().toString();
+        String theSubject = UserSubject.getText().toString();
+
+        String[] to = new String[]{emailTo};
+        //String subject = ("A message from your app!");
+
+        Intent emailIntent = new Intent(Intent.ACTION_SEND);
+
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, to);
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, theSubject);
+        emailIntent.putExtra(Intent.EXTRA_TEXT, message);
+        //emailIntent.setType("text/plain");
+        emailIntent.setType("message/rfc822");
+        startActivity(Intent.createChooser(emailIntent, "Email"));
+
+
     }
 
 

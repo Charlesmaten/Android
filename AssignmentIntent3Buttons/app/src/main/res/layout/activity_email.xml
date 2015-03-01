@@ -12,18 +12,22 @@
         android:inputType="textEmailAddress"
         android:ems="10"
         android:id="@+id/editTextEmail"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="93dp" />
+        android:layout_marginTop="42dp"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editTextMessage"
+        android:lines="3"
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/editTextEmail"
         android:layout_marginBottom="110dp"
-        android:layout_alignEnd="@+id/editTextEmail" />
+        android:layout_alignEnd="@+id/editTextEmail"
+        android:layout_alignParentRight="false"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_alignParentLeft="false" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -32,8 +36,7 @@
         android:text="Message:"
         android:id="@+id/textView"
         android:layout_above="@+id/editTextMessage"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="51dp" />
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -51,4 +54,22 @@
         android:id="@+id/buttonDone"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextSubject"
+        android:layout_below="@+id/textView3"
+        android:layout_toEndOf="@+id/textView3"
+        android:layout_alignRight="@+id/editTextEmail" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Subject"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/editTextEmail"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="51dp" />
 </RelativeLayout>
