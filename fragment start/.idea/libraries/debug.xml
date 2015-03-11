@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="debug">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/AcclerationAlgo2/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-35670831ab962d7b462308506b8ffd4f5867a9a6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AcclerationAlgo2/app/build/intermediates/pre-dexed/debug/classes-8a4a1adb6881e9e648b869f472b6816e08842701.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AcclerationAlgo2/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-5faad2ac96dfbf65fc314dbe3c7fba0551493240.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AcclerationAlgo2/app/build/intermediates/pre-dexed/debug/classes-d817ce6171112ff9352025a9456336e52cd5e247.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
