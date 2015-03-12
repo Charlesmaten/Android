@@ -1,12 +1,19 @@
 package com.example.charlesmaten.fragmentassignement;
 
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 
 public class MainActivity extends ActionBarActivity {
+
+    //private Button buttonBlue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,4 +43,22 @@ public class MainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void selectFrag(View view) {
+        Fragment fr;
+
+        if(view == findViewById(R.id.buttonBlue)) {
+            fr = new BlueFragment();
+
+        }else {
+            fr = new FragmentOne();
+        }
+
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fm.beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_place, fr);
+        fragmentTransaction.commit();
+
+    }
+
 }

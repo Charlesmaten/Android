@@ -16,6 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Fragment1"
+            android:label="@string/title_activity_fragment" >
+        </activity>
+        <activity
+            android:name=".BlueFragment"
+            android:label="@string/title_activity_blue_fragment" >
+        </activity>
     </application>
 
 </manifest>
