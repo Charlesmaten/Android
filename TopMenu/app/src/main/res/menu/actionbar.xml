@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:yourapp="http://schemas.android.com/apk/res-auto" >
+    <!-- Search, should appear as actionm button -->
+    <item android:id="@+id/action_search"
+        android:icon="@drawable/search"
+        android:title="@string/action_search"
+        yourapp:showAsAction="ifRoom"
+        yourapp:actionViewClass="android.support.v7.widget.SearchView"/>
+    <!-- Settings, should always be in the overflow -->
+    <item android:id="@+id/action_settings"
+        android:icon="@drawable/settingsbutton"
+        android:title="@string/action_settings"
+        yourapp:showAsAction="always"
+        yourapp:actionProviderClass="android.support.v7.widget.ShareActionProvider"/>
+</menu>
