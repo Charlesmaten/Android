@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AssignmentIcons</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_sms">SMS</string>
+    <string name="action_phone">Phone</string>
+    <string name="action_www">www</string>
+</resources>

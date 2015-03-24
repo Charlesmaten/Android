@@ -40,8 +40,6 @@ public class MainActivity extends ActionBarActivity {
         mShareActionProvider = (ShareActionProvider) MenuItemCompat.getActionProvider(shareItem);
         mShareActionProvider.setShareIntent(getDefaultIntent());
         return true;
-
-
     }
 
     private Intent getDefaultIntent() {
