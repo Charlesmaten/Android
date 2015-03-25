@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AsyncTaskDemo 1.0</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="button_run_task">Run Async Task</string>
+     <string name="button_dummy">Dummy</string>
+    <string name="label_sleep_time">Sleep time in seconds:</string>
+    
+</resources>
