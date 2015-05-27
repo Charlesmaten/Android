@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Share your location</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_activity_location">Add marker</string>
+    <string name="title_activity_maps">Add marker</string>
+    <string name="action_hybrid">Hybrid</string>
+    <string name="action_terrain">Terrain</string>
+    <string name="action_normal">Normal</string>
+    <string name="action_sendSms">SMS</string>
+    <string name="action_sendMail">Mail</string>
+    <string name="action_saveLocation">Save location</string>
+</resources>
